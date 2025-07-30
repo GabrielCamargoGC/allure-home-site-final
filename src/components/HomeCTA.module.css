@@ -1,0 +1,41 @@
+.ctaSection {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaSection h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.ctaSection p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.ctaButton {
+  background-color: var(--cor-destaque);
+  color: var(--cor-texto-claro);
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #b79881; /* Um tom um pouco mais claro do dourado para o hover */
+  transform: scale(1.05);
+}

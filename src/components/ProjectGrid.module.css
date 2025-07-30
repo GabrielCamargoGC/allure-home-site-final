@@ -1,0 +1,15 @@
+.projectSection {
+    padding: 60px 40px; 
+  }
+  
+  .sectionTitle {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+  }

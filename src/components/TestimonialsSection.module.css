@@ -1,0 +1,48 @@
+.testimonialsSection {
+    padding: 80px 40px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+  
+  .avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #eee;
+  }
+  
+  .quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 0 20px 0;
+    border: none;
+    padding: 0;
+  }
+  
+  .author {
+    display: block;
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-style: normal;
+  }
+  
+  .projectType {
+    display: block;
+    color: #777;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
