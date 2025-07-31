@@ -55,8 +55,8 @@
     width: 100%;
     padding: 15px;
     border: none;
-    background-color: #d93a54;
-    color: white;
+    background-color: var(--cor-marca);
+    color: var(--cor-texto-claro);
     font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
@@ -65,7 +65,7 @@
   }
   
   .submitButton:hover {
-    background-color: #c22b43;
+    background-color: #82444e; /* Um tom um pouco mais escuro para o hover */
   }
   
   .mapContainer {

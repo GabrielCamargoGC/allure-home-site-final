@@ -1,18 +1,19 @@
 :root {
     /* Paleta de Cores OFICIAL - Allure Home */
-    --cor-primaria: #1c1c1c;    /* Preto/Cinza escuro do site original */
-    --cor-secundaria: #f8f8f8;  /* Cinza super claro para fundos */
-    --cor-destaque: #a4856c;     /* O tom de dourado/bronze do logo e detalhes */
-    --cor-texto: #333333;       /* Cinza escuro para textos */
-    --cor-texto-claro: #ffffff; /* Branco */
+    --cor-primaria: #1c1c1c;    
+    --cor-secundaria: #bbbbbb;  
+    --cor-destaque: #a4856c;  
+    --cor-marca: #9A4E5A;   
+    --cor-texto: #333333;       
+    --cor-texto-claro: #ffffff; 
   }
   
-  /* Reset e Estilos Globais */
+  
   html,
   body {
     height: 100%;
     margin: 0;
-    font-family: var(--font-principal); /* Usaremos esta variável para a fonte */
+    font-family: var(--font-principal); 
     background-color: white;
     color: var(--cor-texto);
   }
@@ -27,7 +28,6 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-titulos); /* Usaremos esta variável para os títulos */
   }
   
   a {
@@ -39,3 +39,5 @@
   a:hover {
     color: var(--cor-primaria);
   }
+
+ 

@@ -2,6 +2,16 @@
     padding: 80px 40px;
   }
   
+  .testimonialCard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+  }
+
   .container {
     max-width: 800px;
     margin: 0 auto;
