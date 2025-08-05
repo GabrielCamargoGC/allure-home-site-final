@@ -1,20 +1,33 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import ProjectCard  from './ProjectCard';
+import ProjectCard from './ProjectCard'; 
 import styles from './ProjectGrid.module.css';
+
+const gridVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2 
+    }
+  }
+};
 
 export default function ProjectGridClient({ projects }) {
   return (
     <motion.section 
       className={styles.projectSection}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
+      variants={gridVariants}
     >
       <h2 className={styles.sectionTitle}>Nossos Projetos</h2>
-      <div className={styles.grid}>
+      <motion.div 
+        className={styles.grid}
+        variants={gridVariants}
+      >
         {projects.map(project => (
           <ProjectCard
             key={project._id}
@@ -22,7 +35,7 @@ export default function ProjectGridClient({ projects }) {
             imageUrl={project.imageUrl}
           />
         ))}
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

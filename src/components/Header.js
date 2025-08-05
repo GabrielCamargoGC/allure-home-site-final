@@ -26,19 +26,14 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${(scrolled || pathname !== '/') ? styles.headerScrolled : ''}`}>
       <div className={styles.container}>
-        <div className={styles.logo}>
-          <Link href="/">
-            LOGO
-          </Link>
-        </div>
         <nav>
           <ul className={styles.navList}>
-            <li><Link href="/" className={pathname === '/' ? styles.active : ''}>Início</Link></li>
-            <li><Link href="/projetos" className={pathname === '/projetos' ? styles.active : ''}>Projetos</Link></li>
-            <li><Link href="/produtos" className={pathname === '/produtos' ? styles.active : ''}>Produtos</Link></li>
-            <li><Link href="/parceiros" className={pathname === '/parceiros' ? styles.active : ''}>Parceiros</Link></li>
-            <li><Link href="/sobre" className={pathname === '/sobre' ? styles.active : ''}>Sobre</Link></li>
-            <li><Link href="/contato" className={pathname === '/contato' ? styles.active : ''}>Contato</Link></li>
+            <li><Link href="/" className={pathname === '/' ? styles.active : ''}>HOME</Link></li>
+            <li><Link href="/projetos" className={pathname === '/projetos' ? styles.active : ''}>PROJETOS</Link></li>
+            <li><Link href="/produtos" className={pathname === '/produtos' ? styles.active : ''}>PRODUTOS</Link></li>
+            <li><Link href="/parceiros" className={pathname === '/parceiros' ? styles.active : ''}>PARCEIROS</Link></li>
+            <li><Link href="/sobre" className={pathname === '/sobre' ? styles.active : ''}>SOBRE</Link></li>
+            <li><Link href="/contato" className={pathname === '/contato' ? styles.active : ''}>CONTATO</Link></li>
           </ul>
         </nav>
       </div>

@@ -36,6 +36,7 @@
 }
 
 .ctaButton:hover {
-  background-color: #b79881; /* Um tom um pouco mais claro do dourado para o hover */
-  transform: scale(1.05);
+  background-color: #b79881; 
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }

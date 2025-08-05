@@ -3,9 +3,18 @@
 import { motion } from 'framer-motion';
 import styles from './ProjectCard.module.css';
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" }
+  }
+};
+
 export default function ProjectCard({ imageUrl, title }) {
   return (
-    <motion.div layout className={styles.card}>
+    <motion.div variants={cardVariants} className={styles.card}>
       <img
         src={imageUrl}
         alt={`Imagem do projeto ${title}`}
