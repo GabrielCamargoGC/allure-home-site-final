@@ -1,17 +1,17 @@
 :root {
-  --cor-primaria: #000000;
-  --cor-fundo: #000000; /* Um cinza muito escuro como alternativa ao preto */
-  --cor-vinho-fundo: #dadada; /* Um tom de vinho escuro e sofisticado */
-  --cor-destaque: #d4af37; /* Um dourado mais vivo para contraste */
-  --cor-texto: #000000; /* Texto principal quase branco */
-  --cor-texto-claro: #ffffff;
+  /* Nova Paleta de Cores - Allure Home Final */
+  --cor-fundo-site: #410810;  /* A cor de vinho principal para o fundo */
+  --cor-fundo-secao: #2a0000; /* Um tom mais escuro para os fundos das seções */
+  --cor-destaque: #808080;    /* O cinza como cor de destaque para detalhes */
+  --cor-primaria: #000000;     /* Preto para elementos como o footer */
+  --cor-texto: #ffffff;       /* O branco como cor de texto principal */
 }
-  
+
   html,
   body {
     display: flex;
     flex-direction: column;
-    background-color: var(--cor-vinho-fundo); 
+    background-color: var(--cor-fundo-site); 
     color: var(--cor-texto); 
   }
   

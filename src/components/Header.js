@@ -8,23 +8,39 @@ import styles from './Header.module.css';
 export default function Header() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.scrollY > 10;
+      const currentScrollY = window.scrollY;
+
+      // Lógica para fundo sólido
+      const isScrolled = currentScrollY > 10;
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
       }
+
+      // Lógica para esconder/mostrar o header
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        // Se rolou para baixo e passou do topo
+        setHidden(true);
+      } else {
+        // Se rolou para cima
+        setHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
-    document.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      document.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [scrolled]);
+  }, [scrolled, lastScrollY]);
 
   return (
-    <header className={`${styles.header} ${(scrolled || pathname !== '/') ? styles.headerScrolled : ''}`}>
+    <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''} ${hidden ? styles.headerHidden : ''}`}>
       <div className={styles.container}>
         <nav>
           <ul className={styles.navList}>
