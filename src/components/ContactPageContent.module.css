@@ -21,6 +21,11 @@
     align-items: flex-start;
     margin-bottom: 25px;
     gap: 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .infoBlock:hover {
+    transform: translateX(5px); 
   }
   
   .infoBlock svg {
@@ -49,20 +54,27 @@
     background-color: #f5f5f5;
     border-radius: 5px;
     font-size: 1rem;
+    transition: box-shadow 0.3s ease; 
   }
+
+.form input:focus,
+.form textarea:focus {
+  outline: none; 
+  box-shadow: 0 0 0 2px var(--cor-marca); 
+}
   
-  .submitButton {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    background-color: var(--cor-marca);
-    color: var(--cor-texto-claro);
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
+.submitButton {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background-color: var(--cor-marca);
+  color: var(--cor-texto-claro);
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
   
   .submitButton:hover {
     background-color: #82444e;

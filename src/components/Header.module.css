@@ -6,13 +6,13 @@
   z-index: 100;
   transition: background-color 0.4s ease, padding 0.4s ease, transform 0.4s ease;
   padding: 30px 0;
+  background-color: rgba(65, 8, 16, 0.85); 
+  backdrop-filter: blur(10px); 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .headerScrolled {
-  background-color: rgba(42, 0, 0, 0.8); /* Fundo vinho semi-transparente */
-  backdrop-filter: blur(10px);
   padding: 20px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .container {
@@ -21,9 +21,30 @@
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Alinha um de cada lado */
   align-items: center;
 }
+
+.nav {
+  /* Opcional: só para garantir que a navegação ocupe o espaço necessário */
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcons a {
+  color: var(--cor-texto-claro);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: var(--cor-destaque);
+  transform: scale(1.1);
+}
+
+
 
 .navList {
   list-style: none;
@@ -45,10 +66,6 @@
   transition: color 0.3s ease;
 }
 
-/* Nova regra para quando o Header precisa de links escuros */
-.headerSolid .navList a {
-  color: var(--cor-primaria);
-}
 
 .navList a::after {
   content: '';
@@ -69,10 +86,6 @@
 
 .navList .active {
   color: var(--cor-destaque); /* Usa a cor cinza de destaque para o link ativo */
-}
-
-.headerSolid .navList .active {
-    color: var(--cor-primaria); /* Link ativo escuro em fundo claro */
 }
 
 .headerHidden {

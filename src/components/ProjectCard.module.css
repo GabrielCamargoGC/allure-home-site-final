@@ -49,3 +49,28 @@
   transform: translateY(0); 
   opacity: 1; 
 }
+
+.zoomButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #111;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.card:hover .zoomButton {
+  opacity: 1;
+  transform: scale(1);
+}

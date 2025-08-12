@@ -1,27 +1,47 @@
+.controlsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
 .filterContainer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 50px;
-  }
-  
-  .filterButton {
-    background-color: #f1f1f1;
-    border: 1px solid #ddd;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .filterButton:hover {
-    background-color: #e0e0e0;
-  }
-  
-  .filterButton.active {
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto-claro);
-    border-color: var(--cor-primaria);
-  }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filterButton {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterButton:hover {
+  background-color: #e0e0e0;
+}
+
+.filterButton.active {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  border-color: var(--cor-primaria);
+}
+
+.searchContainer {
+  width: 100%;
+  max-width: 400px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
