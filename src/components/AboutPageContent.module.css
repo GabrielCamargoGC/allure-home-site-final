@@ -1,92 +1,54 @@
 .heroAbout {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1533090481720-856c6e3c1fdc');
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-  }
-  
-  .heroText h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-  }
-  
-  .heroText p {
-    font-size: 1.2rem;
-    max-width: 600px;
-  }
-  
-  .missionSection {
-    padding: 80px 40px;
-  }
-  
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--cor-branco);
+  height: 50vh;
+}
+
+.heroText h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.heroText p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.missionSection {
+  padding: 80px 40px;
+}
+
+.missionContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.missionText h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+}
+
+.missionText p {
+  line-height: 1.7;
+  color: #555;
+}
+
+.missionImage img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
   .missionContent {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
-  
-  .missionText h2 {
-    font-size: 2.5rem;
-    margin-top: 0;
-  }
-  
-  .missionText p {
-    line-height: 1.7;
-    color: #555;
-  }
-  
-  .missionImage img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .teamSection {
-    padding: 80px 40px;
-    background-color: var(--cor-fundo-secao);
-    text-align: center;
-  }
-  
-  .teamSection h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-  }
-  
-  .teamGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .teamMember img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-  }
-  
-  .teamMember h4 {
-    font-size: 1.2rem;
-    margin: 10px 0 5px 0;
-  }
-  
-  .teamMember p {
-    color: #777;
-    margin: 0;
-  }
-  
-  @media (max-width: 768px) {
-    .missionContent, .teamGrid {
-      grid-template-columns: 1fr;
-    }
-  }
+}

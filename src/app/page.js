@@ -1,9 +1,8 @@
 import Hero from '../components/Hero';
 import ProjectGrid from '../components/ProjectGrid';
 import ServicesSection from '../components/ServicesSection';
-import TestimonialsSection from '../components/TestimonialsSection';
 import AboutSection from '../components/AboutSection';
-import HomeCTA from '../components/HomeCTA'; // 1. Importa o novo CTA
+import HomeCTA from '../components/HomeCTA'; 
 
 export default function Home() {
   return (
@@ -11,7 +10,6 @@ export default function Home() {
       <Hero />
       <ProjectGrid />
       <ServicesSection />
-      <TestimonialsSection />
       <AboutSection />
       <HomeCTA />
     </div>

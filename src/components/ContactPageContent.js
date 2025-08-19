@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import styles from './ContactPageContent.module.css';
 
 const MailIcon = () => (
@@ -13,6 +14,11 @@ const MapPinIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
 );
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
+
 export default function ContactPageContent() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -21,60 +27,53 @@ export default function ContactPageContent() {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert(`Obrigado, ${name}! Sua mensagem foi enviada.`);
-    setName('');
-    setEmail('');
-    setMessage('');
+    setName(''); setEmail(''); setMessage('');
   };
 
   return (
     <section className={styles.contactSection}>
-      <div className={styles.topWrapper}>
-        <div className={styles.leftColumn}>
-          <h2 className={styles.title}>Informações</h2>
-          <div className={styles.infoBlock}>
-            <MapPinIcon />
-            <div>
-              <span>Endereço</span>
-              <p>Av. Antonio da Silva Cunha Bueno, 351, Assis/SP</p>
-            </div>
-          </div>
-          <div className={styles.infoBlock}>
-            <PhoneIcon />
-            <div>
-              <span>Telefone</span>
-              <p>(18) 98125-8500</p>
-            </div>
-          </div>
-          <div className={styles.infoBlock}>
-            <MailIcon />
-            <div>
-              <span>Email</span>
-              <p>contato@allurehomeassis.com.br</p>
-            </div>
-          </div>
-        </div>
+      <div className={styles.container}>
+        <motion.div 
+          className={styles.textHeader}
+          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={itemVariants}
+        >
+          <h1>Entre em Contato</h1>
+          <p>Estamos prontos para transformar seu ambiente. Fale conosco!</p>
+        </motion.div>
 
-        <div className={styles.rightColumn}>
-          <h2 className={styles.title}>Envie sua mensagem</h2>
-          <form onSubmit={handleSubmit} className={styles.form}>
-            <input type="text" placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)} required />
-            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-            <textarea placeholder="Mensagem" rows="6" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea>
-            <button type="submit" className={styles.submitButton}>Enviar</button>
+        <motion.div 
+          className={styles.infoWrapper}
+          initial="hidden" whileInView="visible" viewport={{ once: true }}
+          transition={{ staggerChildren: 0.2 }}
+        >
+          <motion.div variants={itemVariants} className={styles.infoCard}><MapPinIcon /><h3>Nosso Endereço</h3><p>Av. Antonio da Silva Cunha Bueno, 351<br/>Assis/SP</p></motion.div>
+          <motion.div variants={itemVariants} className={styles.infoCard}><PhoneIcon /><h3>Telefone</h3><p>(18) 98125-8500</p></motion.div>
+          <motion.div variants={itemVariants} className={styles.infoCard}><MailIcon /><h3>Email</h3><p>contato@allurehomeassis.com.br</p></motion.div>
+        </motion.div>
+
+        <motion.div 
+          className={styles.mapContainer}
+          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={itemVariants}
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3693.911364710173!2d-50.43009588504703!3d-22.65155798518331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x949573e0e7a1c1d1%3A0x7d2f3b3b3b3b3b3b!2sAv.%20Ant%C3%B4nio%20da%20Silva%20Cunha%20Bueno%2C%20351%20-%20Jardim%20Parana%2C%20Assis%20-%20SP%2C%2019814-361!5e0!3m2!1spt-BR!2sbr!4v1627381234567!5m2!1spt-BR!2sbr2"
+            width="100%" height="450" style={{ border: 0 }}
+            allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </motion.div>
+
+        <motion.div 
+          className={styles.formContainer}
+          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={itemVariants}
+        >
+          <h3>Envie sua mensagem</h3>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.formGroup}><label htmlFor="name">Nome</label><input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} required /></div>
+            <div className={styles.formGroup}><label htmlFor="email">Email</label><input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required /></div>
+            <div className={styles.formGroup}><label htmlFor="message">Mensagem</label><textarea id="message" rows="5" value={message} onChange={(e) => setMessage(e.target.value)} required></textarea></div>
+            <button type="submit" className={styles.submitButton}>Enviar Mensagem</button>
           </form>
-        </div>
-      </div>
-
-      <div className={styles.mapContainer}>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.610842034339!2d-50.4357731241198!3d-22.64689252989184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94950a41d7c37899%3A0xe5435e197e0c341b!2sAv.%20Ant%C3%B4nio%20da%20Silva%20Cunha%20Bueno%2C%20351%20-%20Vila%20Fi%C3%BAza%2C%20Assis%20-%20SP%2C%2019814-380!5e0!3m2!1spt-BR!2sbr!4v1721990425983!5m2!1spt-BR!2sbr"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+        </motion.div>
       </div>
     </section>
   );

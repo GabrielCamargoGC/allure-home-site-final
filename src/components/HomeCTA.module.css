@@ -1,6 +1,6 @@
 .ctaSection {
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-claro);
+  background-color: var(--cor-vinho);
+  color: var(--cor-branco);
   padding: 80px 40px;
   text-align: center;
 }
@@ -18,13 +18,13 @@
 
 .ctaSection p {
   font-size: 1.2rem;
-  color: #ccc;
+  color: #eee;
   margin-bottom: 30px;
 }
 
 .ctaButton {
-  background-color: var(--cor-destaque);
-  color: var(--cor-texto-claro);
+  background-color: var(--cor-branco); 
+  color: var(--cor-vinho);
   border: none;
   padding: 15px 40px;
   font-size: 1.1rem;
@@ -32,11 +32,13 @@
   cursor: pointer;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  }
 
-.ctaButton:hover {
-  background-color: #b79881; 
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-}
+  .ctaButton:hover {
+    background-color: var(--cor-vinho); 
+    color: var(--cor-branco);             
+    transform: scale(1.03);           
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); 
+    }

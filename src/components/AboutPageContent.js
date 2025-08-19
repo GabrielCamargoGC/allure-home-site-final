@@ -1,28 +1,14 @@
 import styles from './AboutPageContent.module.css';
-import imageUrlBuilder from '@sanity/image-url';
-import { client } from '@/lib/sanity';
 
-const builder = imageUrlBuilder(client);
-function urlFor(source) {
-  return builder.image(source);
-}
-
-export default function AboutPageContent({ pageData }) {
-  const { 
-    heroImage, 
-    missionText, 
-    missionImage, 
-    teamMembers 
-  } = pageData;
-
+export default function AboutPageContent() {
   return (
     <div>
       <section 
         className={styles.heroAbout} 
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${urlFor(heroImage).width(1200).url()})` }}
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519389950473-47e1917814ad?w=500')` }}
       >
         <div className={styles.heroText}>
-          <h1>{pageData.title || 'Nossa História'}</h1>
+          <h1>Nossa História</h1>
           <p>Conheça a jornada e os valores que fazem da Allure Home uma referência em design e tecnologia.</p>
         </div>
       </section>
@@ -30,25 +16,13 @@ export default function AboutPageContent({ pageData }) {
       <section className={styles.missionSection}>
         <div className={styles.missionContent}>
           <div className={styles.missionText}>
-            <h2>{pageData.missionTitle || 'Missão & Visão'}</h2>
-            <p>{missionText}</p>
+            <h2>Missão & Visão</h2>
+            <p>Nossa missão é transformar casas em lares inteligentes e sofisticados, oferecendo soluções personalizadas que unem estética e funcionalidade. Acreditamos que a tecnologia deve servir ao conforto e à beleza, e trabalhamos incansavelmente para trazer as melhores e mais inovadoras soluções para nossos clientes.</p>
+            <p>Visamos ser a principal referência em automação e design de interiores na região, reconhecidos pela excelência, inovação e pela capacidade de realizar os sonhos dos nossos clientes.</p>
           </div>
           <div className={styles.missionImage}>
-            <img src={urlFor(missionImage).width(500).url()} alt="Equipa a trabalhar num projeto" />
+            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=500" alt="Equipa a trabalhar num projeto" />
           </div>
-        </div>
-      </section>
-
-      <section className={styles.teamSection}>
-        <h2>{pageData.teamTitle || 'Nossa Equipa'}</h2>
-        <div className={styles.teamGrid}>
-          {teamMembers?.map(member => (
-            <div key={member.name} className={styles.teamMember}>
-              <img src={urlFor(member.photo).width(120).height(120).url()} alt={`Foto de ${member.name}`} />
-              <h4>{member.name}</h4>
-              <p>{member.role}</p>
-            </div>
-          ))}
         </div>
       </section>
     </div>

@@ -1,20 +1,20 @@
 export default {
-    name: 'partner',
-    title: 'Arquitetos Parceiros', 
-    type: 'document',
-    fields: [
-      {
-        name: 'name',
-        title: 'Nome do Arquiteto', 
-        type: 'string',
+  name: 'partner',
+  title: 'Marca Parceira',
+  type: 'document',
+  fields: [
+    {
+      name: 'name',
+      title: 'Nome da Marca',
+      type: 'string',
+    },
+    {
+      name: 'logo',
+      title: 'Logotipo',
+      type: 'image',
+      options: {
+        hotspot: true,
       },
-      {
-        name: 'photo', 
-        title: 'Foto', 
-        type: 'image',
-        options: {
-          hotspot: true,
-        },
-      },
-    ]
-  }
+    },
+  ]
+}

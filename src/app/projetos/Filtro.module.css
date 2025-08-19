@@ -14,28 +14,30 @@
 }
 
 .filterButton {
-  background-color: #f1f1f1;
+  background-color: var(--cor-fundo-claro);
   border: 1px solid #ddd;
   padding: 10px 20px;
   border-radius: 20px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: var(--cor-preto);
 }
 
 .filterButton:hover {
   background-color: #e0e0e0;
+  border-color: #ccc;
 }
 
 .filterButton.active {
-  background-color: var(--cor-primaria);
-  color: var(--cor-texto-claro);
-  border-color: var(--cor-primaria);
+  background-color: var(--cor-vinho);
+  color: var(--cor-branco);
+  border-color: var(--cor-vinho);
 }
 
 .searchContainer {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 .searchInput {
@@ -44,4 +46,10 @@
   font-size: 1rem;
   border-radius: 25px;
   border: 1px solid #ccc;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: var(--cor-vinho);
+    box-shadow: 0 0 0 2px rgba(65, 8, 16, 0.2);
 }
