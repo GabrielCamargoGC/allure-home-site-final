@@ -8,7 +8,8 @@ export default function AboutPageContent() {
         style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519389950473-47e1917814ad?w=500')` }}
       >
         <div className={styles.heroText}>
-          <h1>Nossa História</h1>
+          <h1>Nossa História
+          </h1>
           <p>Conheça a jornada e os valores que fazem da Allure Home uma referência em design e tecnologia.</p>
         </div>
       </section>
@@ -21,7 +22,7 @@ export default function AboutPageContent() {
             <p>Visamos ser a principal referência em automação e design de interiores na região, reconhecidos pela excelência, inovação e pela capacidade de realizar os sonhos dos nossos clientes.</p>
           </div>
           <div className={styles.missionImage}>
-            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=500" alt="Equipa a trabalhar num projeto" />
+            <img src="/loja.jpeg" alt="Equipa a trabalhar num projeto" />
           </div>
         </div>
       </section>

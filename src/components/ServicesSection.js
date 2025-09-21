@@ -16,22 +16,24 @@ export default function ServicesSection() {
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
-      <h2 className={styles.title}>Nossos Serviços</h2>
-      <div className={styles.servicesGrid}>
-        <div className={styles.serviceCard}>
-          <CurtainIcon />
-          <h3>Cortinas Sob Medida</h3>
-          <p>Designs exclusivos que combinam com seu estilo, do clássico ao contemporâneo, com tecidos de alta qualidade.</p>
-        </div>
-        <div className={styles.serviceCard}>
-          <BlindsIcon />
-          <h3>Persianas Modernas</h3>
-          <p>Soluções práticas e elegantes para controle de luz e privacidade em qualquer ambiente residencial ou comercial.</p>
-        </div>
-        <div className={styles.serviceCard}>
-          <AutomationIcon />
-          <h3>Automação Residencial</h3>
-          <p>Integre suas cortinas e persianas com a tecnologia de casa inteligente, trazendo conforto e modernidade ao seu toque.</p>
+      <div className="container">
+        <h2 className={styles.title}>Nossos Serviços</h2>
+        <div className={styles.servicesGrid}>
+          <div className={styles.serviceCard}>
+            <CurtainIcon />
+            <h3>Cortinas Sob Medida</h3>
+            <p>Designs exclusivos que combinam com seu estilo, do clássico ao contemporâneo, com tecidos de alta qualidade.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <BlindsIcon />
+            <h3>Persianas Modernas</h3>
+            <p>Soluções práticas e elegantes para controle de luz e privacidade em qualquer ambiente residencial ou comercial.</p>
+          </div>
+          <div className={styles.serviceCard}>
+            <AutomationIcon />
+            <h3>Automação Residencial</h3>
+            <p>Integre suas cortinas e persianas com a tecnologia de casa inteligente, trazendo conforto e modernidade ao seu toque.</p>
+          </div>
         </div>
       </div>
     </motion.section>

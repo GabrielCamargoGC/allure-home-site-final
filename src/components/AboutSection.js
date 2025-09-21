@@ -15,7 +15,7 @@ export default function AboutSection() {
         transition={{duration: 0.6, ease: "easeOut"}}
       >
         <img 
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" 
+          src="/andreia camargo.jpeg" 
           alt="Ambiente de design de interiores sofisticado" 
           className={styles.aboutImage}
         />

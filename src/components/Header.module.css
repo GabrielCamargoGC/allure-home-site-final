@@ -7,7 +7,7 @@
   background-color: var(--cor-vinho);
   padding: 15px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  /* Removemos a transição de transform, pois o header não se esconde mais */
+ 
 }
 
 .container {
@@ -29,18 +29,18 @@
 }
 
 .nav {
-  /* Esta div não é estritamente necessária, mas não prejudica */
+  
 }
 
 .navList {
   list-style: none;
   display: flex;
-  gap: 35px; /* Aumenta o espaço entre os links */
+  gap: 35px; 
   margin: 0;
   padding: 0;
 }
 
-/* A regra agora é diretamente no Link (que renderiza como <a>) */
+
 .navList a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -70,7 +70,7 @@
   transition: transform 0.4s ease;
 }
 
-/* Aplicamos o hover e o active na mesma regra para o efeito da linha */
+
 .navList a:hover::after,
 .navList a.active::after {
   transform: scaleX(1);
